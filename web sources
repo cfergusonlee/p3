@@ -1,0 +1,23 @@
+A text file containing a list of Web sites, books, forums, blog posts, github repositories etc that you referred to or used in this submission (Add N/A if you did not use such resources).
+
+- Used Google maps to look up addresses with missing zip codes
+
+
+- https://gist.github.com/carlward/54ec1c91b62a5f911c42#file-sample_project-md 
+I explored this example for project guidelines and sql exploration ideas
+
+
+- https://github.com/julia-kudinovich/data-analyst-p3-wrangle-openstreetmap-data/blob/master/P3_Code.py 
+
+I borrowed the following lines of code:
+
+node_attribs["id"] = element.attrib["id"]
+node_attribs["lat"] =  element.attrib['lat']
+node_attribs["lon"] =  element.attrib['lon']
+node_attribs["user"] =  element.attrib['user']
+node_attribs["uid"] =  element.attrib['uid']
+node_attribs["version"] =  element.attrib['version']
+node_attribs["changeset"] =  element.attrib['changeset']
+node_attribs["timestamp"] =  element.attrib['timestamp']
+
+I was having trouble setting the types for these values and did not understand why my code was not compiling.  After looking at the error, I understand I did not need to set the type, I could just use the string values as-is and let the schema convert the data.  I also made small naming errors (writing lit instead of lat for longitude) which were caught eventually.
