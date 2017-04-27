@@ -11869,7 +11869,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Region">Region<a class="anchor-link" href="#Region">&#182;</a></h2><h4 id="West-Springfield,-Massachusetts">West Springfield, Massachusetts<a class="anchor-link" href="#West-Springfield,-Massachusetts">&#182;</a></h4><p><a href="https://www.openstreetmap.org/relation/1181623">https://www.openstreetmap.org/relation/1181623</a></p>
-<p>This is my hometown.  Being familiar with the area helped me discover a few inconsistencies in the dataset.  When I initially tried to print out all of the street names, many were missing.  Not seeing my the street I live on pushed my curiousity and prompted me to explore the dataset further.</p>
+<p>This is my hometown.  Being familiar with the area helped me discover a few inconsistencies in the dataset.  When I initially tried to print out all of the street names, many were missing.  Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.</p>
 
 </div>
 </div>
@@ -12105,7 +12105,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To fix the zip codes I looked up the addresses on Google maps and inserted the correct zip codes.  The substitution was carried out using re.sub.  Even though most addresses could be found with a simple lookup, two gave truly unique headaches.  The 31 Springfield Street address was supposed to be for the Chicopee Library but that address did not exist.  There wasn't even a Springfield Street running through that section of town.  The best thing I could do was look it up by the GPS latitude and longitude data and insert that into the value.  The closest match was 13 center street.  The other issue was the address for STCC, a local community college.  It was listed as 1 Armoury Square but there is Armoury Square is a park, not a street.  I changed it to Armoury Street to be more uniform with the rest of the database.</p>
+<p>To fix the zip codes I looked up the addresses on Google maps and inserted the correct zip codes.  The substitution was carried out using re.sub.  Even though most addresses could be found with a simple lookup, two gave truly unique headaches.  The 31 Springfield Street address was supposed to be for the Chicopee Library but that address did not exist.  There wasn't even a Springfield Street running through that section of town.  The best thing I could do was look it up by the GPS latitude and longitude data and insert that into the value.  The closest match was 13 Center Street.  The other issue was the address for STCC, a local community college.  It was listed as 1 Armoury Square but Armoury Square is a park, not a street.  I changed it to Armoury Street to be more uniform with the rest of the database.</p>
 
 </div>
 </div>
@@ -12165,7 +12165,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Postcode-Tags">Postcode Tags<a class="anchor-link" href="#Postcode-Tags">&#182;</a></h3><p>After seeing the incorrect zip code in the address tags, I decided to explore postcode tags.  Fortunately after auditing them there were no inconsistencies.  Even though West Springfield has one zip code (01089) the map area I downloaded from mapzen included some surrounding areas because it was was not an exact town boundary.  Here's the code I used to pull the postal codes:</p>
+<h3 id="Postcode-Tags">Postcode Tags<a class="anchor-link" href="#Postcode-Tags">&#182;</a></h3><p>After seeing the incorrect zip code in the address tags, I decided to explore postcode tags.  Fortunately after auditing them there were no inconsistencies.  Even though West Springfield has one zip code (01089) the map area I downloaded from Mapzen included some surrounding areas because it was was not an exact town boundary.  Here's the code I used to pull the postal codes:</p>
 
 </div>
 </div>
@@ -12315,7 +12315,73 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Importing-the-Data-into-SQL">Importing the Data into SQL<a class="anchor-link" href="#Importing-the-Data-into-SQL">&#182;</a></h2><p>I imported the data into sql using python.  Here are the resulting SQL schemas.</p>
+<h2 id="Importing-the-Data-into-SQL">Importing the Data into SQL<a class="anchor-link" href="#Importing-the-Data-into-SQL">&#182;</a></h2><p>I imported the data into sql using python.  Here is a snippet of code I used to import the nodes CSV file into a nodes SQL data base.  The remaining SQL databases were created in a similar manner.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create Nodes Database</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="n">sqlite_file</span> <span class="o">=</span> <span class="s2">&quot;west-springfield.db&quot;</span>
+
+<span class="c1"># Connect to the database</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sqlite_file</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">NODES_PATH = &quot;nodes.csv&quot;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="c1"># Get a cursor object</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># Before creating the table, drop the table if it already exists</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;DROP TABLE IF EXISTS nodes&#39;</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Create the table, specifying the column names and data types:</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE nodes(id INTEGER primary key, </span>
+<span class="s1">    lat REAL, </span>
+<span class="s1">    lon REAL, </span>
+<span class="s1">    user TEXT references ways, </span>
+<span class="s1">    uid INTEGER references ways, </span>
+<span class="s1">    version TEXT references ways, </span>
+<span class="s1">    changeset INTEGER references ways, </span>
+<span class="s1">    timestamp TEXT references ways)</span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># commit the changes</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Read in the csv file as a dictionary, format the data as a list of tuples:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nodes.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+    <span class="n">dr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span> <span class="c1"># comma is default limiter</span>
+    <span class="n">to_db</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;changeset&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dr</span><span class="p">]</span>
+
+<span class="c1"># insert the formatted data</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s2">&quot;INSERT INTO nodes(id, lat, lon, user, uid, version, changeset, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?);&quot;</span><span class="p">,</span> <span class="n">to_db</span><span class="p">)</span>
+<span class="c1"># commit the changes</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="SQL-Schemas">SQL Schemas<a class="anchor-link" href="#SQL-Schemas">&#182;</a></h3><p>Below are the resulting SQL database schemas.</p>
 
 </div>
 </div>
