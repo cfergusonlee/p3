@@ -1,9 +1,9 @@
 
 # OpenStreetMap Data Case Study
 ---
-**By: [Courtney Ferguson Lee](https://www.linkedin.com/in/courtneyfergusonlee/) **
+**By: [Courtney Ferguson Lee](https://www.linkedin.com/in/courtneyfergusonlee/)**
 
-**Date: April 11, 2017 **
+**Date: April 11, 2017**
 
 ## Region
 ---
