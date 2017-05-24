@@ -1,12 +1,11 @@
 
 # OpenStreetMap Data Case Study
----
+
 **By: [Courtney Ferguson Lee](https://www.linkedin.com/in/courtneyfergusonlee/)**
 
 **Date: April 11, 2017**
 
 ## Region
----
 
 ** [West Springfield, Massachusetts](https://www.openstreetmap.org/relation/1181623)**
 
@@ -15,7 +14,7 @@ This is my hometown. Being familiar with the area helped me discover a few incon
 <img src='https://drive.google.com/uc?export=download&id=0B0YVy8F1XohwOVEtMmExY1FXUkE'>
 
 ## Process Overview
----
+
 1. Create a smaller file to test
 2. Clean the data
  1. Check for problem characters in each tag
@@ -28,7 +27,6 @@ This is my hometown. Being familiar with the area helped me discover a few incon
 6. Document
 
 ## Cleaning the Data
----
 
 Cleaning the data consisted of multiple stages.  The first involved checking all tags for problem characters, then diving deeper into individual tags to make the data more uniform.  Problems can be broken down into the following categories:
 
@@ -221,7 +219,7 @@ def update_phone(phone):
 ```
 
 ## Conversion from XML to CSV
----
+
 Once all tags were cleaned I used the code provided in the 'Preparing the Database' lesson to create the .csv files.
 
 
@@ -270,7 +268,6 @@ def process_map(file_in, validate):
 ```
 
 ## Importing the Data into SQL
----
 
 I imported the data into sql using python.  Here is a snippet of code I used to import the nodes CSV file into a nodes SQL data base.  The remaining SQL databases were created in a similar manner.
 
@@ -386,7 +383,6 @@ Below are the resulting SQL database schemas.
 
 
 ## Exploring the SQL Database
----
 
 ### Distribution of Postal Codes
 
@@ -507,7 +503,6 @@ db.close()
 ```
 
 ## Additional Ideas
----
 
 ## Historical Changes
 
