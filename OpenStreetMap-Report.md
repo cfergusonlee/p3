@@ -7,7 +7,7 @@
 
 ## Region
 
-** [West Springfield, Massachusetts](https://www.openstreetmap.org/relation/1181623)**
+**[West Springfield, Massachusetts](https://www.openstreetmap.org/relation/1181623)**
 
 This is my hometown. Being familiar with the area helped me discover a few inconsistencies in the dataset. When I initially tried to print out all of the street names, many were missing. Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.
 
