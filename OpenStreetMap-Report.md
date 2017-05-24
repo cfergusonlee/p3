@@ -9,7 +9,7 @@
 
 **[West Springfield, Massachusetts](https://www.openstreetmap.org/relation/1181623)**
 
-This is my hometown. Being familiar with the area helped me discover a few inconsistencies in the dataset. When I initially tried to print out all of the street names, many were missing. Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.
+This is my hometown.  I was excited to put some of my data cleaning and data wrangling techniques to use.  Being familiar with the area helped me discover a few inconsistencies. When I initially tried to explore the street names data, many were missing. Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.
 
 <img src='https://drive.google.com/uc?export=download&id=0B0YVy8F1XohwOVEtMmExY1FXUkE'>
 
