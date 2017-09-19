@@ -17,10 +17,10 @@ This is my hometown.  I was excited to put some of my data cleaning and data wra
 
 1. Create a smaller file to test
 2. Clean the data
- 1. Check for problem characters in each tag
- 2. Clean up overabbreviated street names
- 3. Fix incorrect zip codes
- 4. Standardize phone numbers
+   1. Check for problem characters in each tag
+   2. Clean up overabbreviated street names
+   3. Fix incorrect zip codes
+   4. Standardize phone numbers
 3. Convert from xml to csv
 4. Import the cleaned .csv into a SQL database
 5. Explore the database through queries
