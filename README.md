@@ -1,4 +1,7 @@
 # P3: Wrangle West Springfield OpenStreetMap Data
+
+! [West Springfield Map](https://www.openstreetmap.org/relation/1181623)
+
 This project used data wrangling techniques to explore and clean OpenStreetMap data for West Springfield, MA.  I used Python for most of the cleaning and SQL to create a relational database.  A summary of the process is below:
 
 **Process Overview**
