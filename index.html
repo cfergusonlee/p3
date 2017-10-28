@@ -11778,17 +11778,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="OpenStreetMap-Data-Case-Study">OpenStreetMap Data Case Study<a class="anchor-link" href="#OpenStreetMap-Data-Case-Study">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Region">Region<a class="anchor-link" href="#Region">&#182;</a></h2><h4 id="West-Springfield,-Massachusetts">West Springfield, Massachusetts<a class="anchor-link" href="#West-Springfield,-Massachusetts">&#182;</a></h4><p><a href="https://www.openstreetmap.org/relation/1181623">https://www.openstreetmap.org/relation/1181623</a></p>
-<p>This is my hometown.  Being familiar with the area helped me discover a few inconsistencies in the dataset.  When I initially tried to print out all of the street names, many were missing.  Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.</p>
+<h1 id="OpenStreetMap-Data-Case-Study">OpenStreetMap Data Case Study<a class="anchor-link" href="#OpenStreetMap-Data-Case-Study">&#182;</a></h1><p><strong>By: <a href="https://www.linkedin.com/in/courtneyfergusonlee/">Courtney Ferguson Lee</a></strong></p>
+<p><strong>Date: April 11, 2017</strong></p>
 
 </div>
 </div>
@@ -11798,7 +11789,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Process-Overview">Process Overview<a class="anchor-link" href="#Process-Overview">&#182;</a></h1><ol>
+<h2 id="Region">Region<a class="anchor-link" href="#Region">&#182;</a></h2><p><strong><a href="https://www.openstreetmap.org/relation/1181623">West Springfield, Massachusetts</a></strong></p>
+<p>This is my hometown. I was excited to put some of my data cleaning and data wrangling techniques to use. Being familiar with the area helped me discover a few inconsistencies. When I initially tried to explore the street names data, many were missing. Not seeing the street I lived on pushed my curiousity and prompted me to explore the dataset further.</p>
+<p><img src='https://drive.google.com/uc?export=download&id=0B0YVy8F1XohwOVEtMmExY1FXUkE'></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Process-Overview">Process Overview<a class="anchor-link" href="#Process-Overview">&#182;</a></h2><ol>
 <li>Create a smaller file to test</li>
 <li>Clean the data<ol>
 <li>Check for problem characters in each tag</li>
@@ -11821,7 +11824,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cleaning-the-Data">Cleaning the Data<a class="anchor-link" href="#Cleaning-the-Data">&#182;</a></h1><p>Cleaning the data consisted of multiple stages.  The first involved checking all tags for problem characters, then diving deeper into individual tags to make the data more uniform.  Problems can be broken down into the following categories:</p>
+<h2 id="Cleaning-the-Data">Cleaning the Data<a class="anchor-link" href="#Cleaning-the-Data">&#182;</a></h2><p>Cleaning the data consisted of multiple stages.  The first involved checking all tags for problem characters, then diving deeper into individual tags to make the data more uniform.  Problems can be broken down into the following categories:</p>
 <ul>
 <li>Problem characters: (\$, ?, #, &amp;, etc)</li>
 <li>Fixing Street Type Abbreviations (Main St, East Mountain Rd)<ul>
@@ -11848,7 +11851,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Checking-for-problem-characters">Checking for problem characters<a class="anchor-link" href="#Checking-for-problem-characters">&#182;</a></h2><p>This was the first check before cleaning any data.  It helped thinking of this as the first layer in the process.  By eliminating any problem characters first, I could focus on making the remaining data uniform.</p>
+<h3 id="Checking-for-problem-characters">Checking for problem characters<a class="anchor-link" href="#Checking-for-problem-characters">&#182;</a></h3><p>This was the first check before cleaning any data.  It helped thinking of this as the first layer in the process.  By eliminating any problem characters first, I could focus on making the remaining data uniform.</p>
 
 </div>
 </div>
@@ -11874,16 +11877,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fixing-Street-Type-Abbreviations">Fixing Street Type Abbreviations<a class="anchor-link" href="#Fixing-Street-Type-Abbreviations">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Addr:-Street-Tags">Addr: Street Tags<a class="anchor-link" href="#Addr:-Street-Tags">&#182;</a></h3><p>This was the first tag type I explored.  Initially I thought all street names would be found here, but initial queries only yielded a few dozen names.  Cleaning up these tags did help me develop a systematic way to clean up subsequent tags, though.  The first thing I did was to audit all 'addr:street' tags to look for any unusual street abbreviations.</p>
+<h3 id="Fixing-Street-Type-Abbreviations">Fixing Street Type Abbreviations<a class="anchor-link" href="#Fixing-Street-Type-Abbreviations">&#182;</a></h3><h4 id="Addr:-Street-Tags">Addr: Street Tags<a class="anchor-link" href="#Addr:-Street-Tags">&#182;</a></h4><p>This was the first tag type I explored.  Initially I thought all street names would be found here, but initial queries only yielded a few dozen names.  Cleaning up these tags did help me develop a systematic way to clean up subsequent tags, though.  The first thing I did was to audit all 'addr:street' tags to look for any unusual street abbreviations.</p>
 
 </div>
 </div>
@@ -11961,7 +11955,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Street-Name-Tags">Street Name Tags<a class="anchor-link" href="#Street-Name-Tags">&#182;</a></h3><p>Cleaning up street names turned out to be more difficult than expected.  This is because not all street names were stored under the same keys.  Some were stored under 'addr:street' tags, but the vast majority used a combination of 'highway' and 'name' tags.  I couldn't just pull all ways tags with 'name' for a key.  The 'name' tag was also used to identify buildings, parks, etc.</p>
+<h4 id="Street-Name-Tags">Street Name Tags<a class="anchor-link" href="#Street-Name-Tags">&#182;</a></h4><p>Cleaning up street names turned out to be more difficult than expected.  This is because not all street names were stored under the same keys.  Some were stored under 'addr:street' tags, but the vast majority used a combination of 'highway' and 'name' tags.  I couldn't just pull all ways tags with 'name' for a key.  The 'name' tag was also used to identify buildings, parks, etc.</p>
 <p>One thing all streets had in common, however was that they had a highway tag. Because tags were parsed iteratively, once a 'name' tag was found I had to loop back to check if there was a 'highway' tag present.</p>
 <p>I'm not sure why they chose to map the data like this.  They may have started with one method, but switched over to a different mapping system.  If it were up to me I would put all street names under an 'addr:street' tag but this would probably result in a loss of information.</p>
 
@@ -11990,16 +11984,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Incorrect-Zip-Codes">Incorrect Zip Codes<a class="anchor-link" href="#Incorrect-Zip-Codes">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Address-Tags">Address Tags<a class="anchor-link" href="#Address-Tags">&#182;</a></h3><p>This part of the process looked at full business addresses in the dataset.  This revealed inconsistencies in postal codes as well as the usual street abbreviations.  Unfortunately, it was not as simple as formating bad zip codes so they were more uniform.  Many zip codes were simply missing and had to be looked up.  Fortunately, the audit and update process helped me look at all non-uniform addresses at once and develop a comprehensive solution.</p>
+<h3 id="Incorrect-Zip-Codes">Incorrect Zip Codes<a class="anchor-link" href="#Incorrect-Zip-Codes">&#182;</a></h3><h4 id="Address-Tags">Address Tags<a class="anchor-link" href="#Address-Tags">&#182;</a></h4><p>This part of the process looked at full business addresses in the dataset.  This revealed inconsistencies in postal codes as well as the usual street abbreviations.  Unfortunately, it was not as simple as formating bad zip codes so they were more uniform.  Many zip codes were simply missing and had to be looked up.  Fortunately, the audit and update process helped me look at all non-uniform addresses at once and develop a comprehensive solution.</p>
 
 </div>
 </div>
@@ -12084,7 +12069,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Postcode-Tags">Postcode Tags<a class="anchor-link" href="#Postcode-Tags">&#182;</a></h3><p>After seeing the incorrect zip code in the address tags, I decided to explore postcode tags.  Fortunately after auditing them there were no inconsistencies.  Even though West Springfield has one zip code (01089) the map area I downloaded from Mapzen included some surrounding areas because it was was not an exact town boundary.  Here's the code I used to pull the postal codes:</p>
+<h4 id="Postcode-Tags">Postcode Tags<a class="anchor-link" href="#Postcode-Tags">&#182;</a></h4><p>After seeing the incorrect zip code in the address tags, I decided to explore postcode tags.  Fortunately after auditing them there were no inconsistencies.  Even though West Springfield has one zip code (01089) the map area I downloaded from Mapzen included some surrounding areas because it was was not an exact town boundary.  Here's the code I used to pull the postal codes:</p>
 
 </div>
 </div>
@@ -12117,7 +12102,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Non-uniform-Phone-Numbers">Non-uniform Phone Numbers<a class="anchor-link" href="#Non-uniform-Phone-Numbers">&#182;</a></h2>
+<h3 id="Non-uniform-Phone-Numbers">Non-uniform Phone Numbers<a class="anchor-link" href="#Non-uniform-Phone-Numbers">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12126,7 +12111,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Phone-Tags">Phone Tags<a class="anchor-link" href="#Phone-Tags">&#182;</a></h3><p>Phone tags were relatively simple to format.  Most were in the form xxx.xxx.xxxx.  A few listed the +1 first.  To change this I used a regular expression.</p>
+<p>Phone tags were relatively simple to format.  Most were in the form xxx.xxx.xxxx.  A few listed the +1 first.  To change this I used a regular expression.</p>
 
 </div>
 </div>
@@ -12136,7 +12121,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src='https://drive.google.com/uc?export=download&id=0B0YVy8F1XohwbXVTV2lCckpZbGs'></p>
+<p><img src='https://drive.google.com/uc?export=download&id=0B0YVy8F1XohweGw2MDU2REZ4UVk'></p>
 
 </div>
 </div>
@@ -12533,16 +12518,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exploring-the-SQL-Database">Exploring the SQL Database<a class="anchor-link" href="#Exploring-the-SQL-Database">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Distribution-of-Postal-Codes">Distribution of Postal Codes<a class="anchor-link" href="#Distribution-of-Postal-Codes">&#182;</a></h2><p>The postal codes were queried in SQL.  Although the universal zip code for all addresses in West Springfield is 01089, there were a few others that showed up in the dataset.  This is because the map area was not an exact border of the city.  It was a square area that include a few surrounding towns, including Westfield (01085), Chicopee (01013), Springfield (01104) and a few others.</p>
+<h2 id="Exploring-the-SQL-Database">Exploring the SQL Database<a class="anchor-link" href="#Exploring-the-SQL-Database">&#182;</a></h2><h3 id="Distribution-of-Postal-Codes">Distribution of Postal Codes<a class="anchor-link" href="#Distribution-of-Postal-Codes">&#182;</a></h3><p>The postal codes were queried in SQL.  Although the universal zip code for all addresses in West Springfield is 01089, there were a few others that showed up in the dataset.  This is because the map area was not an exact border of the city.  It was a square area that include a few surrounding towns, including Westfield (01085), Chicopee (01013), Springfield (01104) and a few others.</p>
 
 </div>
 </div>
@@ -12583,7 +12559,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Kinds-of-Amenities">Kinds of Amenities<a class="anchor-link" href="#Kinds-of-Amenities">&#182;</a></h2><p>Below is a distribution of the top 10 most prominent amenities in West Springfield.  I was surprised to discover that the number of places of worship in the area outnumber the number of schools.  At first I wanted to take a closer look at the types of restaurants in the area but there are only 15, so it seemed to make more sense to look at amenities as a whole.</p>
+<h3 id="Kinds-of-Amenities">Kinds of Amenities<a class="anchor-link" href="#Kinds-of-Amenities">&#182;</a></h3><p>Below is a distribution of the top 10 most prominent amenities in West Springfield.  I was surprised to discover that the number of places of worship in the area outnumber the number of schools.  At first I wanted to take a closer look at the types of restaurants in the area but there are only 15, so it seemed to make more sense to look at amenities as a whole.</p>
 
 </div>
 </div>
@@ -12629,7 +12605,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Distribution-of-Users">Distribution of Users<a class="anchor-link" href="#Distribution-of-Users">&#182;</a></h2><p>Below are the top 10 map contributers.  It appears the Office of Geographic Information was responsible for the majority of the data.  I hope to see my name among these some day.</p>
+<h3 id="Distribution-of-Users">Distribution of Users<a class="anchor-link" href="#Distribution-of-Users">&#182;</a></h3><p>Below are the top 10 map contributers.  It appears the Office of Geographic Information was responsible for the majority of the data.  I hope to see my name among these some day.</p>
 
 </div>
 </div>
@@ -12678,7 +12654,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Individual-User-Contributions">Individual User Contributions<a class="anchor-link" href="#Individual-User-Contributions">&#182;</a></h2><p>I was interested in what some of the users actually did to contribute to the project.  It seems MassGIS may have built the dataset initially but I wanted to see how Tomash Pilshchik changed it.  It turns out he focused on  nodes tags by far.</p>
+<h3 id="Individual-User-Contributions">Individual User Contributions<a class="anchor-link" href="#Individual-User-Contributions">&#182;</a></h3><p>I was interested in what some of the users actually did to contribute to the project.  It seems MassGIS may have built the dataset initially but I wanted to see how Tomash Pilshchik changed it.  It turns out he focused on  nodes tags by far.</p>
 
 </div>
 </div>
@@ -12762,16 +12738,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Additional-Ideas">Additional Ideas<a class="anchor-link" href="#Additional-Ideas">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Historical-Changes">Historical Changes<a class="anchor-link" href="#Historical-Changes">&#182;</a></h2><p>Looking over the data, there are a few areas I'd like to explore more but they would require more historical context.  For instance, Broadway shows up 11 times as a street name but there is no street type.  When I looiked it up on Wikipedia, it said some streets in the Town Common were changed from Broadway to Park Street and Park Avenue.  However, without further clues I would have no idea which streets should be mapped to one or the other.  I'm sure City Hall probably has the historical records but I did not get a chance to go.  This might be worth it for the next user to explore.</p>
+<h2 id="Additional-Ideas">Additional Ideas<a class="anchor-link" href="#Additional-Ideas">&#182;</a></h2><h2 id="Historical-Changes">Historical Changes<a class="anchor-link" href="#Historical-Changes">&#182;</a></h2><p>Looking over the data, there are a few areas I'd like to explore more but they would require more historical context.  For instance, Broadway shows up 11 times as a street name but there is no street type.  When I looiked it up on Wikipedia, it said some streets in the Town Common were changed from Broadway to Park Street and Park Avenue.  However, without further clues I would have no idea which streets should be mapped to one or the other.  I'm sure City Hall probably has the historical records but I did not get a chance to go.  This might be worth it for the next user to explore.</p>
 <h2 id="Special-Abbreviations">Special Abbreviations<a class="anchor-link" href="#Special-Abbreviations">&#182;</a></h2><p>The next step for further exploration would be to check and fix any special abbreviations beyond street types.  For instance the Connecticut River is listed as Connecticut R., but a universal solution wouldn't work there.  If all 'R.' abbreviations were replaced with 'River', it could have unintended consequences.  For instance, the John R. Fausey Elementary School would be changed to the John River Fausey Elementary School.  And while I don't know his middle name, I doubt I'd get that lucky.  There are many opportunities for exploration here.</p>
 
 </div>
