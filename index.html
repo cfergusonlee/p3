@@ -11942,9 +11942,7 @@ $( document ).ready(function(){
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Checks if it&#39;s an &#39;addr:street&#39; tag</span>
 <span class="k">if</span> <span class="n">is_street_name</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
-    <span class="c1">#print &quot;Old value: &quot; + way_tag[&#39;value&#39;]</span>
     <span class="n">way_tag</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">update_name</span><span class="p">(</span><span class="n">way_tag</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">mapping</span><span class="p">)</span>
-    <span class="c1">#print &quot;New value: &quot; + way_tag[&#39;value&#39;]</span>
 </pre></div>
 
 </div>
@@ -11957,7 +11955,7 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I created a dictionary using the street type (Ave, Avenue, Rd, etc) as the key and the specific instance as the value.  I used a regular expression to search for and pull the street type and then I used another regular expression to substitute the proper mapping.  Looking at the data like this helped me develop a plan to map the data and correct any abbreviations.</p>
+<p>I created a dictionary using the street type (Ave, Avenue, Rd, etc) as the key and the specific instance as the value.  I used a regular expression to search for and pull the street type and then I used another regular expression to substitute the proper mapping.  Looking at the data in this way helped me develop a plan to map the data and correct any abbreviations.</p>
 <p>The audit and update process helped me capture problematic addresses in a more complete and systematic way.  It also tested my regular expression skills!</p>
 
 </div>
@@ -12134,7 +12132,6 @@ $( document ).ready(function(){
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Checks whether a given element is a postal code</span>
 <span class="k">def</span> <span class="nf">is_post_code</span><span class="p">(</span><span class="n">elem</span><span class="p">):</span>
-    <span class="c1">#return (&#39;post&#39; in elem.attrib[&#39;k&#39;])</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;k&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;addr:postcode&quot;</span><span class="p">)</span>
 
 <span class="c1"># Creates a dictionary of postal codes</span>
@@ -13847,8 +13844,8 @@ JJUEw40kSZKkkmC4kSRJklQSDDeSJEmSSsJXEcPwf1uPzkEAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Shameless-Plug">Shameless Plug<a class="anchor-link" href="#Shameless-Plug">&#182;</a></h3><p>I've heard a lot of chatter about <a href="https://www.mymamamiaspizza.com/">Mama Mia's Pizzeria</a>, but I've never been there. I think it's time to make a visit.</p>
-<p><img src='https://raw.githubusercontent.com/spacecadet84/p3/master/screenshots/mama_mias.png'></p>
+<h3 id="Shameless-Plug">Shameless Plug<a class="anchor-link" href="#Shameless-Plug">&#182;</a></h3><p>I've heard a lot of chatter about <a href="https://www.mymamamiaspizza.com/">Mama Mia's Pizzeria</a>, but I've never been there. I think it might be time for a visit.</p>
+<p><img src='https://raw.githubusercontent.com/spacecadet84/p3/master/screen-shots/mama_mias.png'></p>
 
 </div>
 </div>
